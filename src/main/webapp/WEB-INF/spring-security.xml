@@ -1,0 +1,37 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.1.xsd">
+
+    <http auto-config="true">
+        <!-- acces for any user -->
+        <intercept-url pattern="/" access="permitAll" />
+        <intercept-url pattern="/resources/**" access="permitAll" />
+        <intercept-url pattern="/welcome" access="permitAll" />
+        <intercept-url pattern="/contacts" access="permitAll" />
+        <intercept-url pattern="/accessDenied" access="permitAll" />
+        <intercept-url pattern="/test/rest/**" access="permitAll" />
+        <intercept-url pattern="/rest/**" access="permitAll" />
+
+        <!-- some restrictions -->
+        <intercept-url pattern="/admin**" access="hasRole('ADMIN')" />
+        <intercept-url pattern="/**" access="isAuthenticated()"/>
+        <!--<intercept-url pattern="/dba**" access="hasRole('ADMIN') and hasRole('DBA')" />-->
+        <!--<form-login  authentication-failure-url="/accessDenied"/>-->
+
+        <access-denied-handler error-page="/accessDenied"/>
+    </http>
+
+    <authentication-manager >
+        <authentication-provider>
+            <user-service>
+                <user name="bill"  password="abc123"  authorities="ROLE_USER" />
+                <user name="admin" password="root123" authorities="ROLE_ADMIN" />
+                <user name="dba"   password="root123" authorities="ROLE_ADMIN,ROLE_DBA" />
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
+
+
+</beans:beans>
