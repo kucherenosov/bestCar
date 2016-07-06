@@ -24,7 +24,7 @@
         <property name="locations">
             <list>
                 <value>classpath:props/common.properties</value>
-                <value>classpath:props/calendar.${calendar_env}.properties</value>
+                <value>classpath:props/bestcar.${bestcar_env}.properties</value>
             </list>
         </property>
     </bean>
