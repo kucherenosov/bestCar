@@ -9,6 +9,8 @@
     <title>Euro CAR</title>
 
     <%-- css --%>
+    <link href="<c:url value='/resources/css/bootstrap.css'/>" rel="stylesheet">
+    <link href="<c:url value='/resources/css/test.css'/>" rel="stylesheet">
     <%--<link href='<c:url value="/css/normalize.css"/>' rel="stylesheet" type="text/css">--%>
     <%--<link href='<c:url value="/css/all.css"/>' rel="stylesheet" type="text/css">--%>
 
