@@ -61,6 +61,12 @@ public class WebTestController extends BaseController {
     }
 
 
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String loginPage() {
+        return "login";
+    }
+
+
     @RequestMapping(value="/accessDenied", method = RequestMethod.GET)
     public String accessDenied(ModelMap model) {
         return "errors/403";
