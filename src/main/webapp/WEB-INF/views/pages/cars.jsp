@@ -10,7 +10,7 @@
         <c:forEach items="${cars}" var="car">
             <tr>
                 <td>
-                    <c:out value="${car.carCompany}"/>
+                    <c:out value="${car.carCompany.name}"/>
                 </td>
                 <td>
                     <c:out value="${car.carModel}"/>

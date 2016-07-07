@@ -1,9 +1,6 @@
 package com.bestcar.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 /**
@@ -17,8 +14,10 @@ public class Car {
     @Column(name = "CAR_ID")
     private Long carId;
 
-    @Column(name="CAR_COMPANY")
-    private String carCompany;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "CAR_COMPANY_ID", nullable = false)
+    private CarCompany carCompany;
 
     @Column(name="CAR_MODEL")
     private String carModel;
@@ -48,11 +47,11 @@ public class Car {
         this.carId = carId;
     }
 
-    public String getCarCompany() {
+    public CarCompany getCarCompany() {
         return carCompany;
     }
 
-    public void setCarCompany(String carCompany) {
+    public void setCarCompany(CarCompany carCompany) {
         this.carCompany = carCompany;
     }
 
