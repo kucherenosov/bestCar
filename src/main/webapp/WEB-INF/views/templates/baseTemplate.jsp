@@ -19,8 +19,7 @@
     <%--<script data-main="scripts/main" src='<c:url value="/scripts/require.js"/>'></script>--%>
 
 
-    <%--<tiles:importAttribute name="bodyClass" ignore="true" />--%>
-    <%--<tiles:importAttribute name="bodyContentClass" ignore="true" />--%>
+    <tiles:importAttribute name="bodyContentClass" ignore="true" />
 
 </head>
 <body>
