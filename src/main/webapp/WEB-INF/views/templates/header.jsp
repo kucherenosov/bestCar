@@ -3,34 +3,34 @@
 
 <div class="container">
 
-    <div class="nav-items-bar">
-        <div class="nav-items">
-            <a href="${cpath}/welcome" id="welcome">Home</a>
-            <a href="${cpath}/cars" id="cars">Cars</a>
-            <a href="${cpath}/carCompany" id="car_company"><span>Car </span>Company</a>
-            <a href="${cpath}/carModels" id="car_models"><span>Car </span>Models</a>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="#">Best Car</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <%--<li class="active"><a href="#">Home</a></li>--%>
+                    <li><a href="${cpath}/welcome" id="welcome">Home</a></li>
+                    <li><a href="${cpath}/cars" id="cars">Cars</a></li>
+                    <li><a href="${cpath}/carCompany" id="car_company"><span>Car </span>Company</a></li>
+                    <li><a href="${cpath}/carModels" id="car_models"><span>Car </span>Models</a></li>
+                    <c:choose>
+                        <c:when test="${appPageContext.loggedIn}">
+                            <li><a href="${cpath}/settings" id="account_link">My Account</a></li>
+                            <c:url value="${appPageContext.logoutUrl}" var="logoutUrl"/>
+                            <li><a href="${logoutUrl}">Logout</a></li>
+                        </c:when>
+                        <c:otherwise>
+                            <c:url value="${appPageContext.loginUrl}" var="loginUrl" scope="page"/>
+                            <li><a href="${loginUrl}">Sign In</a></li>
+                        </c:otherwise>
+                    </c:choose>
+                </ul>
+            </div><!--/.nav-collapse -->
         </div>
-
-        <div class="nav-items nav-items-right">
-            <c:choose>
-                <c:when test="${appPageContext.loggedIn}">
-                    <a href="${cpath}/settings" id="account_link">MY ACCOUNT</a>
-                    <c:url value="${appPageContext.logoutUrl}" var="logoutUrl"/>
-                    <div id="menu">
-                        <a href="${logoutUrl}">logout</a>
-                    </div>
-                </c:when>
-                <c:otherwise>
-                    <c:url value="${appPageContext.loginUrl}" var="loginUrl" scope="page"/>
-                    <div id="menu">
-                        <a href="${loginUrl}">SIGN IN</a>
-                    </div>
-                </c:otherwise>
-            </c:choose>
-        </div>
-    </div>
-
-    <h1>Best Car</h1>
-
+    </nav>
 </div>
 <!-- /mainHeader.jsp -->
