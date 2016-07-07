@@ -10,7 +10,9 @@
 
     <%-- css --%>
     <link href="<c:url value='/resources/css/bootstrap.css'/>" rel="stylesheet">
+    <link href="<c:url value='/resources/css/sticky-footer-navbar.css'/>" rel="stylesheet">
     <link href="<c:url value='/resources/css/test.css'/>" rel="stylesheet">
+
     <%--<link href='<c:url value="/css/normalize.css"/>' rel="stylesheet" type="text/css">--%>
     <%--<link href='<c:url value="/css/all.css"/>' rel="stylesheet" type="text/css">--%>
 
@@ -24,7 +26,7 @@
 </head>
 <body>
 
-    <div id="site_container">
+    <%--<div id="site_container">--%>
 
         <header class="navbar">
             <tiles:insertAttribute name="header"/>
@@ -34,12 +36,12 @@
             <tiles:insertAttribute name="body"/>
         </div>
 
-    </div>
+    <%--</div>--%>
 
-    <footer id="footer">
+    <footer class="footer">
         <tiles:insertAttribute name="footer"/>
     </footer>
 
-    <div id="back_to_top" class="visible"></div>
+
 </body>
 </html>

@@ -1,7 +1,7 @@
 <%@ include file="../incl/t.jsp" %>
 
 <c:if test="${fn:length(cars) gt 0}">
-    <table>
+    <table class="table table-hover">
         <tr>
             <th>Car company</th>
             <th>Model</th>
