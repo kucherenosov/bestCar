@@ -1,6 +1,8 @@
 package com.bestcar.controller;
 
 import com.bestcar.model.Car;
+import com.bestcar.model.CarCompany;
+import com.bestcar.repo.CarCompanyRepository;
 import com.bestcar.repo.CarRepository;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,9 @@ public class WebTestController extends BaseController {
 
     @Autowired
     private CarRepository carService;
+
+    @Autowired
+    private CarCompanyRepository carCompanyService;
 
     @RequestMapping(method = RequestMethod.GET)
     public String defaultGet(ModelMap model) {
@@ -45,6 +50,14 @@ public class WebTestController extends BaseController {
         List<Car> cars =  Lists.newArrayList(carService.findAll());
         model.addAttribute("cars", cars);
         return "cars";
+    }
+
+
+    @RequestMapping(value="/carCompany", method = RequestMethod.GET)
+    public String getCarCompanies(ModelMap model) {
+        List<CarCompany> companies =  Lists.newArrayList(carCompanyService.findAll());
+        model.addAttribute("carCompanies", companies);
+        return "carCompay";
     }
 
 
