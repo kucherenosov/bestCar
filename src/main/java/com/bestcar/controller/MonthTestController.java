@@ -16,7 +16,7 @@ import java.util.Locale;
  * Created by skucherenosov on 7/27/16.
  */
 @Controller
-public class MonthTestController {
+public class MonthTestController extends BaseController {
 
     @RequestMapping(value="/months", method = RequestMethod.GET)
     public String getMonthes(ModelMap model) {

@@ -1,5 +1,6 @@
 package com.bestcar.controller.admin;
 
+import com.bestcar.controller.BaseController;
 import com.bestcar.model.CarCompany;
 import com.bestcar.repo.CarCompanyRepository;
 import com.google.common.collect.Lists;
@@ -17,7 +18,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/admin/carCompany")
-public class CarCompanyController {
+public class CarCompanyController extends BaseController {
 
     @Autowired
     private CarCompanyRepository carCompanyService;
