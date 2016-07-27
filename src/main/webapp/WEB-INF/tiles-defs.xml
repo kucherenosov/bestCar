@@ -26,6 +26,11 @@
         <put-attribute name="body" value="/WEB-INF/views/pages/carCompany.jsp"/>
     </definition>
 
+    <definition name="months" extends="defaultTemplate">
+        <put-attribute name="bodyContentClass" value="container"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/months.jsp"/>
+    </definition>
+
     <definition name="admin" extends="defaultTemplate">
         <put-attribute name="bodyContentClass" value="container"/>
         <put-attribute name="body" value="/WEB-INF/views/pages/admin.jsp"/>
