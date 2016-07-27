@@ -15,7 +15,7 @@
                     <%--<li class="active"><a href="#">Home</a></li>--%>
                     <li><a href="${cpath}/welcome" id="welcome">Home</a></li>
                     <li><a href="${cpath}/cars" id="cars">Cars</a></li>
-                    <li><a href="${cpath}/carCompany" id="car_company"><span>Car </span>Company</a></li>
+                    <li><a href="${cpath}/admin/carCompany" id="car_company"><span>Car </span>Company</a></li>
                     <li><a href="${cpath}/carModels" id="car_models"><span>Car </span>Models</a></li>
                     <c:choose>
                         <c:when test="${appPageContext.loggedIn}">
