@@ -25,15 +25,20 @@
                     <img src="${cpath}/image/company/car/${carCompany.osr}/${carCompany.fileName}" width="122px">
                 </td>
                 <td>
-                    <button type="button" class="btn btn-success">
+                    <a class="btn btn-success" href="${cpath}/admin/carCompany/edit/${carCompany.carCompanyId}" role="button">
                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> edit
-                    </button>
+                    </a>
                 </td>
             </tr>
         </c:forEach>
 
         <td colspan="4"></td>
-        <td><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> add new</button></td>
+        <td>
+            <a class="btn btn-success" href="${cpath}/admin/carCompany/add/" role="button">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> add new
+            </a>
+        </td>
+
     </table>
 
 </c:if>
