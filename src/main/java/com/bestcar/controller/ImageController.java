@@ -32,14 +32,14 @@ public class ImageController {
 
     @RequestMapping(value = "/company/car/{companyOSR}/{fileName}", produces = MediaType.IMAGE_JPEG_VALUE)
     @ResponseBody
-    public byte[] getImageWithFileName(@PathVariable("companyOSR") String companyOSR, @PathVariable("fileName") String fileName) {
+    public byte[] getCarCompanyLogo(@PathVariable("companyOSR") String companyOSR, @PathVariable("fileName") String fileName) {
         String fullFileName =  makeFilePath(companyOSR, fileName);
         return readFile(fullFileName);
     }
 
     @RequestMapping(value = "/company/car/{companyOSR}", produces = MediaType.IMAGE_JPEG_VALUE)
     @ResponseBody
-    public byte[] getImage(@PathVariable("companyOSR") String companyOSR) {
+    public byte[] getCarCompanyLogo(@PathVariable("companyOSR") String companyOSR) {
         String fullFileName =  makeFilePath(companyOSR, defaultImageName);
         return readFile(fullFileName);
     }
