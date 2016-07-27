@@ -13,6 +13,7 @@
         <!-- acces for any user -->
         <intercept-url pattern="/" access="permitAll" />
         <intercept-url pattern="/resources/**" access="permitAll" />
+        <intercept-url pattern="/image/**" access="permitAll" />
         <intercept-url pattern="/welcome" access="permitAll" />
         <intercept-url pattern="/contacts" access="permitAll" />
         <intercept-url pattern="/accessDenied" access="permitAll" />

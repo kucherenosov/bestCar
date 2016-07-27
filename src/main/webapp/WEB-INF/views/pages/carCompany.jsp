@@ -6,6 +6,7 @@
             <th>ID</th>
             <th>Car company</th>
             <th>Decription</th>
+            <th>logo</th>
         </tr>
         <c:forEach items="${carCompanies}" var="carCompany">
             <tr>
@@ -17,6 +18,9 @@
                 </td>
                 <td>
                     <c:out value="${carCompany.description}"/>
+                </td>
+                <td>
+                    <img src="${cpath}/image/company/car/${carCompany.osr}/${carCompany.fileName}" width="122px">
                 </td>
             </tr>
         </c:forEach>

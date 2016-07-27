@@ -22,6 +22,12 @@ public class CarCompany {
     @Column(name = "DESCRIPTION")
     private String description;
 
+    @Column(name = "OSR")
+    private String osr;
+
+    @Column(name = "FILE_NAME")
+    private String fileName;
+
     public Long getCarCompanyId() {
         return carCompanyId;
     }
@@ -44,6 +50,22 @@ public class CarCompany {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getOsr() {
+        return osr;
+    }
+
+    public void setOsr(String osr) {
+        this.osr = osr;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
     @Override
