@@ -19,7 +19,7 @@ public abstract class BaseController {
     }
 
     public String getLogoutUrl() {
-        return "/login?logout";
+        return "/logout";
     }
 
     public String getLoginUrl() {
