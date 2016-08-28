@@ -41,5 +41,10 @@
         <put-attribute name="body" value="/WEB-INF/views/pages/login.jsp"/>
     </definition>
 
+    <definition name="ng-carCompany" extends="defaultTemplate">
+        <put-attribute name="bodyContentClass" value="container"/>
+        <put-attribute name="body" value="/WEB-INF/views/ng-pages/carCompany.jsp"/>
+    </definition>
+
 
 </tiles-definitions>
