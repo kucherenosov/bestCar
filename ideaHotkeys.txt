@@ -1,0 +1,42 @@
+Cmnd + Shft + a - Show any operation
+
+WINDOW
+------------------
+Cmnd + 1        - project window open/close
+Cmnd + 7        - structure window open/close
+Cmnd + 12       - show close all window
+Cmnd + E        - open last opened files
+Cmnd + Shft + E - open last Editing files
+Cmnd + W        - close window
+
+SELECTION/FORMAT
+------------------
+Opt  +  Up/Dpwn     - selection
+Ctrl + Cmnd + G - select all occur
+Ctrl + Opt  + I - auto indent selection
+Opt  + Cmnd + L - reformat code
+
+
+Navigation in class
+------------------
+Opt + Cmnd + B  - show implementations
+Cmnd + U        - go to Super class
+Ctrl + H        - type hierarchy for Clas
+Cmnd + Shft + H - type hierarchy for Method
+
+EDITING
+------------------
+Opt + Cmnd + V  - extract variable
+Ctrl + T        - Refactoring tools
+Opt + Enter     - inject language editor/flip equals/invert ....
+Cmnd + P        - parameter info
+Opt  + /        - Happy Completion
+Cmnd + Shft + Enter - Completion - automatically close somthing for example if () {}
+
+
+VCS
+------------------
+Cmnd + V        - VCS Operations
+Shft + Cmnd + A - Add file to VCS
+
+
