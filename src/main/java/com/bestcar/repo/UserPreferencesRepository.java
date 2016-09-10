@@ -13,7 +13,7 @@ import java.util.List;
 public interface UserPreferencesRepository extends CrudRepository<UserPreferences, String>, JpaSpecificationExecutor<UserPreferences> {
 
     @Query("select p from UserPreferences p")
-    public List<UserPreferences> getUserPreferences();
+    List<UserPreferences> getUserPreferences();
 
 //    Page<UserPreferences> findByName(String name, Pageable pageable);
 

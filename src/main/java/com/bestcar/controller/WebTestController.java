@@ -23,12 +23,12 @@ public class WebTestController extends BaseController {
         return "welcome";
     }
 
-    @RequestMapping(value="/welcome", method = RequestMethod.GET)
+    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
     public String sayHelloAgain(ModelMap model) {
         return "welcome";
     }
 
-    @RequestMapping(value="/admin", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String getAdminPage(ModelMap model) {
         return "admin";
     }
@@ -41,14 +41,14 @@ public class WebTestController extends BaseController {
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logout(HttpServletRequest request, HttpServletResponse response) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null){
+        if (auth != null) {
             new SecurityContextLogoutHandler().logout(request, response, auth);
         }
         return "redirect:/login?logout";
     }
 
 
-    @RequestMapping(value="/accessDenied", method = RequestMethod.GET)
+    @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
     public String accessDenied(ModelMap model) {
         return "errors/403";
     }
