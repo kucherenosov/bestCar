@@ -1,3 +1,4 @@
+Key map schema = Mac OS X 10.5+
 Cmnd + Shft + a - Show any operation
 
 WINDOW
@@ -11,18 +12,23 @@ Cmnd + W        - close window
 
 SELECTION/FORMAT
 ------------------
-Opt  +  Up/Dpwn     - selection
+Opt  + Up/Dpwn  - selection
 Ctrl + Cmnd + G - select all occur
 Ctrl + Opt  + I - auto indent selection
+Ctrl + Opt  + I - optimize import
 Opt  + Cmnd + L - reformat code
+Cmnd + G        - find next
+Cmnd + Shft + G - find previous
 
-
-Navigation in class
+NAVIGATION IN CLASS
 ------------------
-Opt + Cmnd + B  - show implementations
-Cmnd + U        - go to Super class
-Ctrl + H        - type hierarchy for Clas
-Cmnd + Shft + H - type hierarchy for Method
+Opt  + Cmnd + B  - show implementations
+       Cmnd + U  - go to Super class
+Ctrl + H         - type hierarchy for Clas
+Cmnd + Shft + H  - type hierarchy for Method
+Opt  + Cmnd + U  - show class diagram
+Cmnd + B         - show usages (in pop-up ) / go to usages / go to declaration
+Opt  + F7        - show usages (in window)
 
 EDITING
 ------------------
@@ -33,10 +39,7 @@ Cmnd + P        - parameter info
 Opt  + /        - Happy Completion
 Cmnd + Shft + Enter - Completion - automatically close somthing for example if () {}
 
-
 VCS
 ------------------
-Cmnd + V        - VCS Operations
+Ctrl + V        - VCS Operations
 Shft + Cmnd + A - Add file to VCS
-
-
