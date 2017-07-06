@@ -23,14 +23,14 @@
 
         <!-- (2) some restrictions -->
         <intercept-url pattern="/admin**" access="hasRole('ADMIN')" />
-        <intercept-url pattern="/**" access="isAuthenticated()"/>
+        <!--<intercept-url pattern="/**" access="isAuthenticated()"/>-->
 
         <form-login  login-page="/login" default-target-url="/welcome"
                      login-processing-url="/login"
                      username-parameter="userName"
                      password-parameter="password"
                      authentication-failure-url="/accessDenied" />
-        <csrf/>
+        <csrf disabled="true"/>
 
         <access-denied-handler error-page="/accessDenied"/>
     </http>

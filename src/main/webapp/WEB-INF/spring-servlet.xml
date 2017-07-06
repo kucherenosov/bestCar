@@ -13,12 +13,15 @@
     <!-- mapping static resources (css, js, img) -->
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 
+    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/"/>
+    <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>
+
 
     <!-- include other configurations -->
     <import resource="spring-security.xml" />
     <import resource="spring-data.xml" />
 
-
+    <bean name="/applicationSwaggerConfig" class="com.bestcar.controller.SwaggerConfiguration"/>
 
     <bean id="properties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="locations">
