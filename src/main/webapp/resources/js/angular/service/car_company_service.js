@@ -2,7 +2,9 @@
 
 angular.module('myApp').factory('CarCompanyService', ['$http', '$q', function($http, $q){
 
-    var REST_SERVICE_URI = 'http://localhost:8080/bestcar/rest/carCompany/';
+    //var REST_SERVICE_URI = 'http://localhost:8080/bestcar/rest/carCompany/';
+    var CONTEXT = '/bestcar';
+    var REST_SERVICE_URI = CONTEXT + '/rest/carCompany/';
 
     var factory = {
         fetchAllCarCompanies: fetchAllCarCompanies
