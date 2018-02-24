@@ -8,10 +8,12 @@ git add [file-name]                     | add file to git
 git commit -m "comment"                 | commit data
 git push                                | push data on server
 
-git rm                                  | delete from git
-git reset HEAD benchmarks.rb            | delete file from index, if you have already added it wirh command 'add'
+git rm [file-name]                      | delete from git, and then commit/push
+
+git reset HEAD benchmarks.rb            | delete file from index, if you have already added it wirh command 'add' but not committed it
 
 git status
+
 git log -2                              | show two last comment
 git log --pretty=oneline -10
 git log --stat -1
