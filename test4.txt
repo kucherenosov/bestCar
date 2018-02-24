@@ -1,2 +1,6 @@
 test4
-aaaabbbb
+aaa
+bbb
+ccc
+ddd
+eee
