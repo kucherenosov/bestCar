@@ -1,8 +1,8 @@
 <%@ include file="../incl/t.jsp" %>
 
 
-<div class="container" ng-app="myApp" class="ng-cloak">
-    <table class="table table-hover" ng-controller="CarCompanyController as ctrl">
+<div class="container" ng-app="myApp" class="ng-cloak" ng-controller="CarCompanyController as ctrl">
+    <table class="table table-hover">
         <tr>
             <th>ID</th>
             <th>Car company</th>
@@ -52,10 +52,13 @@
             <a class="btn btn-success" href="${cpath}/admin/carCompany/add/" role="button">
                 <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> add new
             </a>
+
+            <a class="btn btn-success" ng-href="" ng-click="ctrl.addToCart()" role="button">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> add Cart
+            </a>
         </td>
 
     </table>
-
 
 
 

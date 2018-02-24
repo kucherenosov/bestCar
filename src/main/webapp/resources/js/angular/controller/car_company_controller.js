@@ -33,6 +33,10 @@ angular.module('myApp').controller('CarCompanyController', ['$scope', 'CarCompan
             );
     }
 
+    self.addToCart = function () {
+        CarCompanyService.addTestCart();
+    }
+
 
     self.editCompany = function (editedPart) {
         editedPart.mode = ROW_MODE_ENUM.EDITED_MODE;

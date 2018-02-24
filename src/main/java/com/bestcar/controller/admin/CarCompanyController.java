@@ -1,5 +1,6 @@
 package com.bestcar.controller.admin;
 
+import javax.servlet.http.Cookie;
 import com.bestcar.controller.BaseController;
 import com.bestcar.model.CarCompany;
 import com.bestcar.repo.CarCompanyRepository;
@@ -10,6 +11,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -24,9 +26,16 @@ public class CarCompanyController extends BaseController {
     private CarCompanyRepository carCompanyService;
 
     @RequestMapping(value="", method = RequestMethod.GET)
-    public String getCarCompanies(ModelMap model) {
+    public String getCarCompanies(ModelMap model, HttpServletResponse response) {
         List<CarCompany> companies =  Lists.newArrayList(carCompanyService.findAll());
         model.addAttribute("carCompanies", companies);
+
+        //test add cartCookie
+        response.addCookie(new Cookie("cart", "cartId"));
+
+        //
+        response.addCookie(new Cookie("cart", null));
+
         return "carCompay";
     }
 
