@@ -20,3 +20,7 @@ git log --stat -1
 
 
 git revert [commit]                     | revert changes from some commit
+
+------------------------------------------------------------------------------
+
+git remote -v                           | show URL for remote repo
